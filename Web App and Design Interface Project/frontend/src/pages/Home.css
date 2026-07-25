@@ -1,0 +1,104 @@
+.hero {
+  position: relative;
+  height: 440px;
+  background: linear-gradient(0deg, rgba(36,28,24,0.35), rgba(36,28,24,0.35)),
+    url("https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1600&auto=format&fit=crop")
+    center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+  color: #fff;
+}
+
+.hero__overlay h1 { font-size: 44px; }
+.hero__overlay p { font-size: 15px; margin: 0; }
+.hero__actions { display: flex; gap: 14px; margin-top: 6px; }
+.hero__outline { color: #fff; }
+
+.intro {
+  max-width: 660px;
+  text-align: center;
+  padding: 56px 40px 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.quick-links {
+  display: flex;
+  gap: 24px;
+  padding-top: 40px;
+  flex-wrap: wrap;
+}
+
+.quick-links__card {
+  flex: 1 1 240px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--color-surface);
+}
+
+.quick-links__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-accent-soft);
+}
+
+.quick-links__card p { color: var(--color-text-muted); font-size: 13px; margin: 0; }
+.quick-links__card a { color: var(--color-accent); font-size: 13px; font-weight: 600; }
+
+.awards {
+  background: #f4efe9;
+  margin-top: 56px;
+  padding: 44px 0;
+}
+
+.awards__label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.awards__row { display: flex; gap: 24px; flex-wrap: wrap; }
+
+.awards__card {
+  flex: 1 1 220px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 22px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.awards__stars { color: var(--color-accent); font-size: 12px; margin-bottom: 8px; }
+.awards__source { margin-top: 10px; font-size: 12px; color: #9a8f85; }
+
+.newsletter-section {
+  text-align: center;
+  padding: 48px 40px;
+}
+.newsletter-section p { color: var(--color-text-muted); font-size: 13px; margin-bottom: 18px; }
+
+@media (max-width: 720px) {
+  .hero { height: 300px; }
+  .hero__overlay h1 { font-size: 30px; }
+  .quick-links { flex-direction: column; }
+  .awards__row { flex-direction: column; }
+}
