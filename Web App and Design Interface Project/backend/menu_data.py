@@ -1,23 +1,25 @@
-"""Static menu content. Kept server-side so the same data can later be moved into a
-real table without changing the frontend contract."""
+"""Static menu content, matching the SRS-specified items and prices exactly.
+Kept server-side so it can later be moved into a real table without changing
+the frontend contract."""
 
 MENU = {
-    "Appetizers": [
-        {"name": "Burrata & Heirloom Tomato", "price": 18, "description": "Basil oil, aged balsamic, sourdough crostini"},
-        {"name": "Seared Scallops", "price": 22, "description": "Cauliflower puree, brown butter, capers"},
-        {"name": "Roasted Beet Salad", "price": 15, "description": "Goat cheese, candied walnuts, arugula"},
+    "Starters": [
+        {"name": "Bruschetta", "price": 8.50, "description": "Fresh tomatoes, basil, olive oil, and toasted baguette slices"},
+        {"name": "Caesar Salad", "price": 9.00, "description": "Crisp romaine with homemade Caesar dressing"},
     ],
-    "Entrees": [
-        {"name": "Pan-Seared Duck Breast", "price": 38, "description": "Cherry gastrique, farro, roasted root vegetables"},
-        {"name": "Braised Short Rib", "price": 34, "description": "Truffle polenta, red wine jus, gremolata"},
-        {"name": "Wild Mushroom Risotto", "price": 27, "description": "Parmesan, white truffle oil (v)"},
+    "Main Courses": [
+        {"name": "Grilled Salmon", "price": 22.00, "description": "Served with lemon butter sauce and seasonal vegetables"},
+        {"name": "Ribeye Steak", "price": 28.00, "description": "12 oz prime cut with garlic mashed potatoes"},
+        {"name": "Vegetable Risotto", "price": 18.00, "description": "Creamy Arborio rice with wild mushrooms"},
     ],
     "Desserts": [
-        {"name": "Creme Brulee", "price": 12, "description": "Madagascar vanilla, torched sugar"},
-        {"name": "Flourless Chocolate Torte", "price": 13, "description": "Espresso anglaise, candied hazelnut"},
+        {"name": "Tiramisu", "price": 7.50, "description": "Classic Italian dessert with mascarpone"},
+        {"name": "Cheesecake", "price": 7.00, "description": "Creamy cheesecake with berry compote"},
     ],
     "Beverages": [
-        {"name": "Reserve Cabernet, glass", "price": 16, "description": "Napa Valley, 2019"},
-        {"name": "Sparkling Elderflower", "price": 8, "description": "Non-alcoholic"},
+        {"name": "Red Wine (Glass)", "price": 10.00, "description": "A selection of Italian reds"},
+        {"name": "White Wine (Glass)", "price": 9.00, "description": "Crisp and refreshing"},
+        {"name": "Craft Beer", "price": 6.00, "description": "Local artisan brews"},
+        {"name": "Espresso", "price": 3.00, "description": "Strong and aromatic"},
     ],
 }

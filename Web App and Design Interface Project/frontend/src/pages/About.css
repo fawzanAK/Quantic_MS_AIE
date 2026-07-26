@@ -23,8 +23,10 @@
 
 .about-team__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+  max-width: 620px;
+  margin: 0 auto;
 }
 
 .about-team__card { text-align: center; }
@@ -36,9 +38,8 @@
   margin: 0 auto 12px;
 }
 
-.about-team__avatar--marco { background-image: url("https://images.unsplash.com/photo-1583394293214-28ded15ee548?q=80&w=300&auto=format&fit=crop"); }
-.about-team__avatar--elena { background-image: url("https://images.unsplash.com/photo-1607631568010-a87245c0daf8?q=80&w=300&auto=format&fit=crop"); }
-.about-team__avatar--david { background-image: url("https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=300&auto=format&fit=crop"); }
+.about-team__avatar--antonio { background-image: url("https://images.unsplash.com/photo-1583394293214-28ded15ee548?q=80&w=300&auto=format&fit=crop"); }
+.about-team__avatar--maria { background-image: url("https://images.unsplash.com/photo-1607631568010-a87245c0daf8?q=80&w=300&auto=format&fit=crop"); }
 .about-team__card h3 { font-size: 16px; }
 .about-team__role { font-size: 12px; color: var(--color-accent); margin: 6px 0; }
 .about-team__card p { font-size: 12px; color: var(--color-text-muted); margin: 0; }

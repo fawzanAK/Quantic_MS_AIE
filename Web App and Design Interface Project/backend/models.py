@@ -27,6 +27,11 @@ class Customer(db.Model):
 
 class Reservation(db.Model):
     __tablename__ = "reservations"
+    __table_args__ = (
+        # NFR-5: the same table can never be double-booked for the same time slot,
+        # even under concurrent requests -- enforced at the database level, not just in app code.
+        db.UniqueConstraint("time_slot", "table_number", name="uq_reservation_slot_table"),
+    )
 
     reservation_id = db.Column(db.Integer, primary_key=True)
     customer_id = db.Column(db.Integer, db.ForeignKey("customers.customer_id"), nullable=False)

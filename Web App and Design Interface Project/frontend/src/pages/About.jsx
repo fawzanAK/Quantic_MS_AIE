@@ -1,16 +1,25 @@
 import "./About.css";
 
 const TEAM = [
-  { name: "Marco Fausse", role: "Owner & Executive Chef", bio: "Trained in Lyon and Florence; 20 years in fine dining.", avatarClass: "marco" },
-  { name: "Elena Ricci", role: "Co-Owner & Pastry Chef", bio: "Formerly of Le Bernardin; James Beard semifinalist.", avatarClass: "elena" },
-  { name: "David Tran", role: "General Manager", bio: "Hospitality lead since the restaurant's opening in 2010.", avatarClass: "david" },
+  {
+    name: "Chef Antonio Rossi",
+    role: "Founder & Executive Chef",
+    bio: "Blends traditional Italian technique with modern culinary innovation; the creative force behind every seasonal menu.",
+    avatarClass: "antonio",
+  },
+  {
+    name: "Maria Lopez",
+    role: "Founder & Restaurateur",
+    bio: "Oversees the guest experience and Café Fausse's commitment to excellent, locally sourced ingredients.",
+    avatarClass: "maria",
+  },
 ];
 
 const MILESTONES = [
-  { year: "2010", label: "Doors open" },
-  { year: "2015", label: "First award" },
-  { year: "2019", label: "Wine cellar expansion" },
-  { year: "2025", label: "Award of Excellence" },
+  { year: "2010", label: "Founded by Antonio Rossi & Maria Lopez" },
+  { year: "2022", label: "Culinary Excellence Award" },
+  { year: "2023", label: "Restaurant of the Year" },
+  { year: "2023", label: "Best Fine Dining Experience — Foodie Magazine" },
 ];
 
 export default function About() {
@@ -18,11 +27,12 @@ export default function About() {
     <div className="about-page">
       <section className="container about-story">
         <div className="about-story__text">
-          <h1>Our Story</h1>
+          <h1>About Café Fausse</h1>
           <p>
-            Café Fausse began in 2010 as a single dining room and a shared belief: that fine dining
-            should feel warm, not formal. Fifteen years on, the same philosophy guides every plate —
-            seasonal, honest, and built on relationships with local growers.
+            Founded in 2010 by Chef Antonio Rossi and restaurateur Maria Lopez, Café Fausse blends
+            traditional Italian flavors with modern culinary innovation. Our mission is to provide an
+            unforgettable dining experience that reflects both quality and creativity — built on
+            excellent food and locally sourced ingredients.
           </p>
         </div>
         <div className="about-story__photo" />

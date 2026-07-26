@@ -79,9 +79,10 @@ Open `http://localhost:5173` in your browser. The reservation form and newslette
 ## Notes on requirements coverage
 
 - 5 pages built in React/JSX: Home, Menu, Reservations, About, Gallery.
-- Consistent header/nav and footer (contact info, hours, links) across all pages.
+- Consistent header/nav and footer (contact info, hours, links) across all pages. Address, phone, and hours match the SRS exactly (1234 Culinary Ave, Suite 100, Washington, DC 20002 · (202) 555-4567 · Mon–Sat 5–11 PM, Sun 5–9 PM).
 - Flexbox used for the header, quick-link cards, awards strip, and form field rows; CSS Grid used for the footer, menu item grids, team bios, and the gallery's masonry-style layout.
-- Reservation system assigns one of 30 tables at random per time slot and rejects fully-booked slots.
+- Menu items/prices, founder bios (Chef Antonio Rossi & Maria Lopez), and the awards/reviews copy match the SRS content exactly (menu on the Menu page; awards/reviews shown on both Home and Gallery, since Gallery is where the SRS's FR-14 places them).
+- Reservation system assigns one of 30 tables at random per time slot and rejects fully-booked slots. A database-level unique constraint on (time_slot, table_number), plus a retry loop against the remaining open tables, prevents double/over-booking under concurrent requests (NFR-5).
 - Newsletter signup with client + server-side email validation, persisted to PostgreSQL.
 - Responsive layouts down to a 375px mobile viewport (nav collapses to a hamburger menu, grids collapse to 1–2 columns).
 

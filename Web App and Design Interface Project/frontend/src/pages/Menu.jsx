@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchMenu } from "../api";
 import "./Menu.css";
 
-const FALLBACK_ORDER = ["Appetizers", "Entrees", "Desserts", "Beverages"];
+const FALLBACK_ORDER = ["Starters", "Main Courses", "Desserts", "Beverages"];
 
 export default function Menu() {
   const [menu, setMenu] = useState(null);
@@ -55,7 +55,7 @@ export default function Menu() {
                 <div className="menu-item" key={item.name}>
                   <div className="menu-item__row">
                     <span>{item.name}</span>
-                    <span>${item.price}</span>
+                    <span>${item.price.toFixed(2)}</span>
                   </div>
                   <p>{item.description}</p>
                 </div>

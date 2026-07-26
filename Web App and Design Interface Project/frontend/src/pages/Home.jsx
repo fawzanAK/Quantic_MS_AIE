@@ -8,10 +8,13 @@ const QUICK_LINKS = [
   { to: "/gallery", title: "Gallery", desc: "A look inside the dining room & kitchen.", cta: "See Photos" },
 ];
 
+// Exact awards & review copy from the project SRS (section 3.1.5 / FR-14).
 const REVIEWS = [
-  { stars: "★★★★★", quote: "The best tasting menu in the city — flawless service, unforgettable flavor.", source: "City Eats Magazine" },
-  { stars: "★★★★★", quote: "An anniversary dinner we'll remember for years. Ask for the tasting menu.", source: "Google Review, J. Martins" },
-  { stars: "🏆", quote: "2025 Award of Excellence — Fine Dining", source: "Wine & Table Guild" },
+  { stars: "🏆", quote: "Culinary Excellence Award — 2022", source: "" },
+  { stars: "🏆", quote: "Restaurant of the Year — 2023", source: "" },
+  { stars: "🏆", quote: "Best Fine Dining Experience — Foodie Magazine, 2023", source: "" },
+  { stars: "★★★★★", quote: "Exceptional ambiance and unforgettable flavors.", source: "Gourmet Review" },
+  { stars: "★★★★★", quote: "A must-visit restaurant for food enthusiasts.", source: "The Daily Bite" },
 ];
 
 export default function Home() {
@@ -52,10 +55,10 @@ export default function Home() {
           <div className="awards__label">Awards &amp; Guest Reviews</div>
           <div className="awards__row">
             {REVIEWS.map((r) => (
-              <div className="awards__card" key={r.source}>
+              <div className="awards__card" key={r.quote}>
                 <div className="awards__stars">{r.stars}</div>
-                <em>"{r.quote}"</em>
-                <div className="awards__source">— {r.source}</div>
+                <em>{r.source ? `"${r.quote}"` : r.quote}</em>
+                {r.source && <div className="awards__source">— {r.source}</div>}
               </div>
             ))}
           </div>

@@ -10,11 +10,11 @@ export default function Footer() {
           <div className="site-footer__brand">Café Fausse</div>
           1234 Culinary Ave, Suite 100
           <br />
-          Napa Valley, CA 94558
+          Washington, DC 20002
           <br />
-          (555) 867-5309
+          (202) 555-4567
           <br />
-          Tue–Sun · 5:00–10:00 PM
+          Mon–Sat 5:00 PM–11:00 PM · Sun 5:00 PM–9:00 PM
         </div>
 
         <div className="site-footer__col">

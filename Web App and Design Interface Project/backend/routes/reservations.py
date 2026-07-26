@@ -3,6 +3,7 @@ from datetime import datetime
 
 from flask import Blueprint, jsonify, request
 from email_validator import EmailNotValidError, validate_email
+from sqlalchemy.exc import IntegrityError
 
 from extensions import db
 from models import Customer, Reservation
@@ -78,8 +79,6 @@ def create_reservation():
             409,
         )
 
-    assigned_table = random.choice(available_tables)
-
     # Look up an existing customer by email, otherwise create one.
     customer = Customer.query.filter_by(customer_email=email).first()
     if customer is None:
@@ -96,14 +95,38 @@ def create_reservation():
         customer.phone_number = phone or customer.phone_number
         customer.newsletter_signup = customer.newsletter_signup or newsletter_opt_in
 
-    reservation = Reservation(
-        customer_id=customer.customer_id,
-        time_slot=time_slot,
-        table_number=assigned_table,
-        guests=guests,
-    )
-    db.session.add(reservation)
-    db.session.commit()
+    # NFR-5: prevent double/over booking even if two requests race for the same
+    # slot. The (time_slot, table_number) unique constraint is the real guard;
+    # here we just retry against the remaining candidate tables if we lose a race.
+    random.shuffle(available_tables)
+    reservation = None
+    for candidate_table in available_tables:
+        reservation = Reservation(
+            customer_id=customer.customer_id,
+            time_slot=time_slot,
+            table_number=candidate_table,
+            guests=guests,
+        )
+        db.session.add(reservation)
+        try:
+            db.session.commit()
+            break
+        except IntegrityError:
+            db.session.rollback()
+            reservation = None
+            continue
+
+    if reservation is None:
+        return (
+            jsonify(
+                {
+                    "success": False,
+                    "message": f"That time is fully booked. {time_slot.strftime('%I:%M %p')} is unavailable "
+                    f"for {guests} guests on {time_slot.strftime('%b %d, %Y')}. Please choose another slot.",
+                }
+            ),
+            409,
+        )
 
     return (
         jsonify(
@@ -111,7 +134,7 @@ def create_reservation():
                 "success": True,
                 "message": "Reservation confirmed.",
                 "reservation": reservation.to_dict(),
-                "table_number": assigned_table,
+                "table_number": reservation.table_number,
             }
         ),
         201,

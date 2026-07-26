@@ -73,6 +73,24 @@ export default function Gallery() {
           <button className="lightbox__nav lightbox__nav--next" onClick={(e) => { e.stopPropagation(); step(1); }}>›</button>
         </div>
       )}
+
+      <section className="gallery-awards container">
+        <div className="gallery-awards__col">
+          <h2>Awards</h2>
+          <ul>
+            <li>🏆 Culinary Excellence Award — 2022</li>
+            <li>🏆 Restaurant of the Year — 2023</li>
+            <li>🏆 Best Fine Dining Experience — Foodie Magazine, 2023</li>
+          </ul>
+        </div>
+        <div className="gallery-awards__col">
+          <h2>Guest Reviews</h2>
+          <ul>
+            <li>★★★★★ "Exceptional ambiance and unforgettable flavors." — Gourmet Review</li>
+            <li>★★★★★ "A must-visit restaurant for food enthusiasts." — The Daily Bite</li>
+          </ul>
+        </div>
+      </section>
     </div>
   );
 }
