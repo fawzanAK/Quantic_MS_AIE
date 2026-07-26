@@ -1,9 +1,9 @@
 import "./About.css";
 
 const TEAM = [
-  { name: "Marco Fausse", role: "Owner & Executive Chef", bio: "Trained in Lyon and Florence; 20 years in fine dining." },
-  { name: "Elena Ricci", role: "Co-Owner & Pastry Chef", bio: "Formerly of Le Bernardin; James Beard semifinalist." },
-  { name: "David Tran", role: "General Manager", bio: "Hospitality lead since the restaurant's opening in 2010." },
+  { name: "Marco Fausse", role: "Owner & Executive Chef", bio: "Trained in Lyon and Florence; 20 years in fine dining.", avatarClass: "marco" },
+  { name: "Elena Ricci", role: "Co-Owner & Pastry Chef", bio: "Formerly of Le Bernardin; James Beard semifinalist.", avatarClass: "elena" },
+  { name: "David Tran", role: "General Manager", bio: "Hospitality lead since the restaurant's opening in 2010.", avatarClass: "david" },
 ];
 
 const MILESTONES = [
@@ -33,7 +33,7 @@ export default function About() {
         <div className="about-team__grid">
           {TEAM.map((person) => (
             <div className="about-team__card" key={person.name}>
-              <div className="about-team__avatar" />
+              <div className={`about-team__avatar about-team__avatar--${person.avatarClass}`} />
               <h3>{person.name}</h3>
               <div className="about-team__role">{person.role}</div>
               <p>{person.bio}</p>

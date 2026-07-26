@@ -1,8 +1,8 @@
 .hero {
   position: relative;
   height: 440px;
-  background: linear-gradient(0deg, rgba(36,28,24,0.35), rgba(36,28,24,0.35)),
-    url("https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1600&auto=format&fit=crop")
+  background: linear-gradient(0deg, rgba(36,28,24,0.45), rgba(36,28,24,0.45)),
+    url("/images/home-cafe-fausse.webp")
     center/cover no-repeat;
   display: flex;
   align-items: center;

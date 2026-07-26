@@ -14,7 +14,7 @@
   height: 260px;
   border-radius: var(--radius-md);
   background: linear-gradient(0deg, rgba(36,28,24,0.15), rgba(36,28,24,0.15)),
-    url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop")
+    url("/images/gallery-cafe-interior.webp")
     center/cover no-repeat;
 }
 
@@ -32,9 +32,13 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: var(--color-accent-soft);
+  background: var(--color-accent-soft) center/cover no-repeat;
   margin: 0 auto 12px;
 }
+
+.about-team__avatar--marco { background-image: url("https://images.unsplash.com/photo-1583394293214-28ded15ee548?q=80&w=300&auto=format&fit=crop"); }
+.about-team__avatar--elena { background-image: url("https://images.unsplash.com/photo-1607631568010-a87245c0daf8?q=80&w=300&auto=format&fit=crop"); }
+.about-team__avatar--david { background-image: url("https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=300&auto=format&fit=crop"); }
 .about-team__card h3 { font-size: 16px; }
 .about-team__role { font-size: 12px; color: var(--color-accent); margin: 6px 0; }
 .about-team__card p { font-size: 12px; color: var(--color-text-muted); margin: 0; }

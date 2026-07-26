@@ -1,12 +1,14 @@
 import { useState } from "react";
 import "./Gallery.css";
 
+// Real Café Fausse photography (provided image pack) mixed with curated
+// royalty-free stock photos for slots the provided pack didn't cover.
 const PHOTOS = [
-  { id: 1, category: "Food", tile: "wide", src: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=900&auto=format&fit=crop" },
-  { id: 2, category: "Interior", src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=900&auto=format&fit=crop" },
-  { id: 3, category: "Ambiance", tile: "span2", src: "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?q=80&w=900&auto=format&fit=crop" },
+  { id: 1, category: "Food", tile: "wide", src: "/images/gallery-ribeye-steak.webp" },
+  { id: 2, category: "Interior", src: "/images/gallery-cafe-interior.webp" },
+  { id: 3, category: "Ambiance", tile: "span2", src: "/images/gallery-special-event.webp" },
   { id: 4, category: "Food", src: "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=900&auto=format&fit=crop" },
-  { id: 5, category: "Interior", tile: "wide", src: "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=900&auto=format&fit=crop" },
+  { id: 5, category: "Interior", tile: "wide", src: "/images/home-cafe-fausse.webp" },
   { id: 6, category: "Food", src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=900&auto=format&fit=crop" },
   { id: 7, category: "Ambiance", src: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=900&auto=format&fit=crop" },
   { id: 8, category: "Food", tile: "hero", src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop" },
