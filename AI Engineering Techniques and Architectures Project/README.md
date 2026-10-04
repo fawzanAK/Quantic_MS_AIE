@@ -63,17 +63,20 @@ python -m evaluation.run_eval --quick    # CI gate: main metrics only, non-zero 
 ```
 
 ## Deploy (Render free tier)
-1. Push to GitHub, create a Render **Blueprint** from the repo and set the Blueprint path to
-   `AI Engineering Techniques and Architectures Project/render.yaml` (it sets `rootDir` to this subfolder), or create a
-   Web Service with the same commands and Root Directory set to this folder.
-2. Render env vars: `APP_TODAY` (optional), `LLM_API_KEY` (optional).
+**Live:** https://northwind-hr-agent-upim.onrender.com (details and measurements in `deployed.md`).
+
+1. In Render, create a **New Web Service** from the repo (free instance type): Language `Docker`, Root Directory
+   `AI Engineering Techniques and Architectures Project`, Dockerfile Path `<that folder>/Dockerfile`, Health Check Path
+   `/health`, Auto-Deploy **Off**. (Alternatively a Blueprint with path `<that folder>/render.yaml`, which uses the Python runtime.)
+2. Render env vars: `LLM_API_KEY` (secret), `LLM_BASE_URL=https://openrouter.ai/api/v1`, `LLM_MODEL=openai/gpt-4o`,
+   `APP_TODAY=2026-10-01` (optional). All are optional; without a key the app runs in deterministic mode.
 3. In Render, copy the service's **Deploy Hook URL**. In GitHub -> Settings -> Secrets add `RENDER_DEPLOY_HOOK_URL` and `APP_URL`
    (the public https URL).
 4. Push to `main`: CI runs tests + the evaluation gate; only if they pass does the `deploy` job call the hook and poll `/health`.
-5. Put the URL into `deployed.md`.
 
-**Free-tier cold start:** Render sleeps idle free services; the first request after idle can take ~30-60 s while the container
-wakes, then the app spawns the MCP subprocess (~1.3 s locally) and loads the index. Open `/health` before a demo to warm it.
+**Free-tier cold start:** Render sleeps idle free services; the first request after idle can take up to about a minute while
+the container wakes, then the app spawns the MCP subprocess (~13 s measured on the free tier's 0.1 CPU). The first chat after a
+fresh deploy is also slow (~84 s measured, one-time). Open `/health` and send one chat message before a demo.
 
 ## Safety model (short)
 Retrieval-evidence guardrail (refuses instead of guessing) - the agent can only preview tickets (`confirmed=false`);

@@ -120,5 +120,5 @@ recall (answers lose the personalised facts such as balance and required notice)
 
 ## 6. Limitations
 Embeddings are LSA not neural; the agent is a deterministic planner, not an LLM tool-calling loop; the LLM path was only smoke-tested live
-(GPT-4o via OpenRouter, a handful of prompts), not evaluated at scale; the eval set is small, self-authored and dev-tuned; free-tier cold start is not measured here; policies and employees are fictional
+(GPT-4o via OpenRouter, a handful of prompts), not evaluated at scale; the eval set is small, self-authored and dev-tuned; free-tier cold start is measured only roughly (see `deployed.md`); policies and employees are fictional
 and the rule engine encodes only the policies in the corpus (it is not legal or HR advice).
