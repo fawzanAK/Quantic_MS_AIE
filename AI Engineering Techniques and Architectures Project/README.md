@@ -12,7 +12,7 @@ checks, HR-case triage) by calling tools **through a Model Context Protocol (MCP
 | MCP server (8 tools, stdio + streamable-HTTP) | `mcp_server/` |
 | Agent, MCP client, web app + chat UI | `app/` |
 | Evaluation (30 questions, runner, results) | `evaluation/` |
-| Tests (48) and CI/CD | `tests/`, `.github/workflows/hr-agent-ci.yml` (at the repo root) |
+| Tests (49) and CI/CD | `tests/`, `.github/workflows/hr-agent-ci.yml` (at the repo root) |
 | Docs | `design-and-evaluation.md`, `ai-tooling.md`, `deployed.md` |
 
 > The server package is called `mcp_server/` (not `mcp/`) so it never shadows the official `mcp` SDK.
@@ -51,11 +51,13 @@ OpenAI-compatible endpoint works; `.env.example` and `render.yaml` are set up fo
 https://openrouter.ai/keys), with Groq as a commented alternative. The LLM only
 (a) classifies low-confidence intents and (b) polishes the final wording. Polished answers are validated - every citation must
 have been retrieved and every number must appear in the evidence - otherwise the deterministic answer is kept.
-**The LLM path has only been tested with a mock transport, never against a live provider** (see `design-and-evaluation.md`).
+The LLM path is unit-tested with a mock transport and was smoke-tested live on 2026-10-05 against OpenAI GPT-4o via
+OpenRouter (direct call, JSON mode, intent fallback and validated synthesis; one polished answer was correctly rejected by the
+citation guardrail). All reported evaluation numbers are from the deterministic no-LLM mode (see `design-and-evaluation.md`).
 
 ## Tests and evaluation
 ```bash
-python -m pytest -q                      # 48 tests incl. MCP tool discovery + real tool calls over stdio
+python -m pytest -q                      # 49 tests incl. MCP tool discovery + real tool calls over stdio
 python -m evaluation.run_eval            # full run: metrics, latency, ablations -> evaluation/results/
 python -m evaluation.run_eval --quick    # CI gate: main metrics only, non-zero exit below thresholds
 ```

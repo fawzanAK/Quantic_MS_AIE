@@ -4,7 +4,7 @@
 - **Claude (Anthropic) via Claude Code** wrote the large majority of the code, the synthetic corpus and mock data, the tests,
   the evaluation harness, CI configuration and these documents, working from the project brief.
 - **No AI-generated runtime dependencies are required.** At runtime the app can optionally call an OpenAI-compatible LLM
-  (Groq free tier by default); it is off unless `LLM_API_KEY` is set. All reported evaluation numbers were produced with it OFF.
+  (OpenAI GPT-4o via OpenRouter by default); it is off unless `LLM_API_KEY` is set. All reported evaluation numbers were produced with it OFF.
 
 ## How AI was used
 | Area | AI contribution | Human responsibility |

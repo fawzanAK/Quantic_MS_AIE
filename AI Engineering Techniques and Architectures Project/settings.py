@@ -37,8 +37,8 @@ MIN_TERM_COVERAGE = float(os.getenv("MIN_TERM_COVERAGE", "0.6"))
 
 # LLM provider (any OpenAI-compatible endpoint: Groq, OpenRouter, local Ollama...).
 LLM_API_KEY = os.getenv("LLM_API_KEY", "")
-LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://api.groq.com/openai/v1")
-LLM_MODEL = os.getenv("LLM_MODEL", "llama-3.3-70b-versatile")
+LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://openrouter.ai/api/v1")
+LLM_MODEL = os.getenv("LLM_MODEL", "openai/gpt-4o")
 LLM_TIMEOUT_S = float(os.getenv("LLM_TIMEOUT_S", "30"))
 
 # MCP: empty URL -> spawn the server as a stdio subprocess (single-service deployment).

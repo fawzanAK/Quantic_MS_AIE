@@ -114,3 +114,13 @@ async def test_llm_answer_citing_unretrieved_section_is_rejected(client):
     bad = "See [POL-016 §9] for details [POL-001 §5]."
     r = await HRAgent(client, _llm(bad)).handle("Can I take 3 days of PTO next week?", "E1001")
     assert not r["llm_used"]["synthesis"]
+
+
+async def test_llm_base_url_accepts_full_endpoint():
+    seen = []
+    def handler(request):
+        seen.append(str(request.url))
+        return httpx.Response(200, json={"choices": [{"message": {"content": "pong"}}]})
+    llm = LLM(api_key="test", base_url="http://llm.test/v1/chat/completions/", transport=httpx.MockTransport(handler))
+    assert await llm.complete([{"role": "user", "content": "ping"}]) == "pong"
+    assert seen == ["http://llm.test/v1/chat/completions"]

@@ -23,6 +23,8 @@ class LLM:
                  transport: httpx.AsyncBaseTransport | None = None):
         self.api_key = api_key if api_key is not None else settings.LLM_API_KEY
         self.base_url = (base_url or settings.LLM_BASE_URL).rstrip("/")
+        # Accept a full endpoint URL too (".../v1/chat/completions"); we append the path ourselves.
+        self.base_url = self.base_url.removesuffix("/chat/completions")
         self.model = model or settings.LLM_MODEL
         self._transport = transport  # injectable for tests
 
