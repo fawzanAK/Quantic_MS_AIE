@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northwind HR Assistant</title>
+<style>
+:root{--bg:#f6f7f9;--panel:#fff;--ink:#1c2430;--muted:#667085;--line:#e3e7ee;--brand:#1f5eff;--brand-ink:#fff;--ok:#117a4a;--warn:#a35a00;--bad:#b42318;--code:#f1f4f9;--pill:#e8efff}
+@media (prefers-color-scheme:dark){:root{--bg:#0f141b;--panel:#171e28;--ink:#e7ecf3;--muted:#98a2b3;--line:#283243;--brand:#5b8cff;--brand-ink:#0b1220;--ok:#4cc38a;--warn:#f0a53a;--bad:#ff7b72;--code:#1d2633;--pill:#1f2d4d}}
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+header{display:flex;align-items:center;gap:12px;padding:12px 20px;background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+header h1{font-size:17px;margin:0}header .sub{color:var(--muted);font-size:13px}
+.badge{margin-left:auto;font-size:12px;padding:3px 10px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.badge.ok{color:var(--ok);border-color:var(--ok)}.badge.bad{color:var(--bad);border-color:var(--bad)}
+main{display:grid;grid-template-columns:300px 1fr;gap:16px;max-width:1280px;margin:16px auto;padding:0 16px}
+@media(max-width:860px){main{grid-template-columns:1fr}}
+aside .card,.chat{background:var(--panel);border:1px solid var(--line);border-radius:12px}
+aside .card{padding:14px;margin-bottom:12px}aside h2{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:0 0 8px}
+select,textarea,button{font:inherit;color:inherit}
+select{width:100%;padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--bg)}
+.demo{display:block;width:100%;text-align:left;padding:9px 10px;margin:6px 0;border:1px solid var(--line);border-radius:8px;background:var(--bg);cursor:pointer}
+.demo:hover{border-color:var(--brand)}.demo b{display:block;font-size:13px}.demo span{color:var(--muted);font-size:12px}
+.tools{font:12px ui-monospace,Menlo,monospace;color:var(--muted);margin:0;padding-left:16px}
+.chat{display:flex;flex-direction:column;min-height:70vh}
+#log{flex:1;padding:16px;overflow:auto}
+.msg{margin:0 0 16px;max-width:900px}.msg.user{margin-left:auto;background:var(--brand);color:var(--brand-ink);padding:10px 14px;border-radius:14px 14px 2px 14px;width:fit-content;max-width:80%}
+.msg.bot .body{background:var(--bg);border:1px solid var(--line);padding:12px 14px;border-radius:14px 14px 14px 2px}
+.body p{margin:.4em 0}.body ul{margin:.3em 0 .3em 1.1em;padding:0}.body li{margin:.15em 0}
+.cite{display:inline-block;font-size:11.5px;background:var(--pill);color:var(--brand);padding:0 6px;border-radius:6px;white-space:nowrap}
+.meta{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 0}.tag{font-size:12px;padding:2px 8px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.tag.esc{color:var(--warn);border-color:var(--warn)}.tag.ok{color:var(--ok);border-color:var(--ok)}
+details{margin-top:8px;border:1px solid var(--line);border-radius:8px;background:var(--panel)}summary{cursor:pointer;padding:6px 10px;font-weight:600;font-size:13px}
+.inner{padding:6px 10px 10px}
+.cit{border-left:3px solid var(--brand);padding:4px 10px;margin:6px 0;font-size:13px}.cit small{color:var(--muted);display:block}
+table{border-collapse:collapse;width:100%;font-size:12.5px}td,th{border-top:1px solid var(--line);padding:5px 6px;vertical-align:top;text-align:left}
+code,pre{font:12px ui-monospace,Menlo,monospace;background:var(--code);border-radius:6px}code{padding:1px 4px}pre{padding:8px;overflow:auto;margin:4px 0;max-height:220px}
+.step-tool{color:var(--brand);font-weight:600}.st-error{color:var(--bad)}.st-skipped{color:var(--warn)}
+.draft{white-space:pre-wrap;font-size:13px;background:var(--code);padding:8px;border-radius:8px}
+.action{border:1px dashed var(--warn);border-radius:10px;padding:10px;margin-top:8px;background:var(--bg)}
+.action button{margin-right:8px}
+button.primary{background:var(--brand);color:var(--brand-ink);border:0;border-radius:8px;padding:7px 14px;cursor:pointer;font-weight:600}
+button.ghost{background:transparent;border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer}
+form{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}textarea{flex:1;resize:none;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--bg);height:46px}
+.typing{color:var(--muted);font-style:italic}
+</style>
+</head>
+<body>
+<header>
+  <div><h1>Northwind HR Assistant</h1><div class="sub">Agentic RAG + MCP tools · all data is synthetic</div></div>
+  <span id="health" class="badge">checking…</span>
+</header>
+<main>
+  <aside>
+    <div class="card"><h2>Acting as</h2><select id="emp"></select><div class="sub" style="color:var(--muted);font-size:12px;margin-top:6px">Personalised answers use this employee's mock record.</div></div>
+    <div class="card"><h2>Demo tasks</h2><div id="demos"></div></div>
+    <div class="card"><h2>MCP tools (discovered)</h2><ul class="tools" id="tools"></ul></div>
+  </aside>
+  <section class="chat">
+    <div id="log"><div class="msg bot"><div class="body">Hi! I can answer HR policy questions (with citations) and help with tasks such as PTO requests, remote-work eligibility, expenses and benefits. Pick a demo task on the left or type a question.</div></div></div>
+    <form id="f"><textarea id="q" placeholder="Ask an HR policy or workflow question…" maxlength="2000"></textarea><button class="primary" id="send">Send</button></form>
+  </section>
+</main>
+<script>
+const $=s=>document.querySelector(s);let state=null;
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function md(t){const lines=esc(t).split('\n');let out='',list=false;
+ const inl=x=>x.replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/(^|[\s(])_(.+?)_(?=[\s).,]|$)/g,'$1<i>$2</i>').replace(/\[(POL-\d{3}) §(\d+)\]/g,'<span class="cite">$1 §$2</span>');
+ for(const l of lines){if(/^\s*-\s+/.test(l)){if(!list){out+='<ul>';list=true}out+='<li>'+inl(l.replace(/^\s*-\s+/,''))+'</li>'}else{if(list){out+='</ul>';list=false}if(l.trim())out+='<p>'+inl(l)+'</p>'}}
+ return out+(list?'</ul>':'')}
+async function j(u,o){const r=await fetch(u,o);if(!r.ok)throw new Error(r.status+' '+(await r.text()));return r.json()}
+async function health(){try{const h=await j('/health');const b=$('#health');b.textContent=(h.status==='ok'?'● healthy':'● degraded')+' · MCP '+(h.mcp.connected?'connected':'down')+' ('+h.mcp.transport+', '+h.mcp.tool_count+' tools)';b.className='badge '+(h.status==='ok'?'ok':'bad')}catch(e){$('#health').textContent='● offline (cold start? retry in a minute)';$('#health').className='badge bad'}}
+async function init(){health();setInterval(health,20000);
+ const emps=await j('/employees');$('#emp').innerHTML=emps.map(e=>`<option value="${e.employee_id}">${e.employee_id} · ${esc(e.name)} — ${esc(e.role)}</option>`).join('');
+ const d=await j('/demo-tasks');$('#demos').innerHTML=d.tasks.map((t,i)=>`<button class="demo" data-i="${i}"><b>${esc(t.title)}</b><span>${esc(t.prompt)}</span></button>`).join('');
+ document.querySelectorAll('.demo').forEach(b=>b.onclick=()=>{const t=d.tasks[b.dataset.i];$('#emp').value=t.employee_id;state=null;ask(t.prompt)});
+ const t=await j('/tools');$('#tools').innerHTML=t.tools.map(x=>`<li title="${esc(x.description)}">${esc(x.name)}</li>`).join('')}
+function add(cls,html){const d=document.createElement('div');d.className='msg '+cls;d.innerHTML=html;$('#log').appendChild(d);$('#log').scrollTop=1e9;return d}
+function trace(tr){return `<details><summary>Tool-call trace (${tr.length} steps)</summary><div class="inner"><table><tr><th>#</th><th>Step</th><th>Details</th><th>ms</th></tr>`+tr.map(s=>{
+ const args=s.arguments&&Object.keys(s.arguments).length?`<pre>${esc(JSON.stringify(s.arguments,null,1))}</pre>`:'';
+ const out=s.output!==undefined?`<details><summary>output</summary><pre>${esc(JSON.stringify(s.output,null,1))}</pre></details>`:'';
+ const name=s.tool?`<span class="step-tool">${esc(s.tool)}</span>`:`<b>${esc(s.type)}</b>`;
+ return `<tr><td>${s.step}</td><td>${name}<br><small>${esc(s.title)}</small></td><td class="st-${s.status||''}">${esc(s.summary||'')}${s.why?`<br><small>why: ${esc(s.why)}</small>`:''}${args}${out}</td><td>${s.latency_ms??''}</td></tr>`}).join('')+`</table></div></details>`}
+function render(r){let h=`<div class="body">${md(r.answer)}</div><div class="meta"><span class="tag">intent: ${esc(r.intent)}</span><span class="tag">${r.latency_ms} ms</span><span class="tag">tools: ${esc([...new Set(r.tools_called)].join(', ')||'none')}</span>`
+ +(r.escalation.needed?`<span class="tag esc">escalation: ${esc(r.escalation.route||'')}</span>`:'')+(r.needs_clarification?'<span class="tag">needs clarification</span>':'')+`<span class="tag">${r.llm_used.synthesis?'LLM-polished':'grounded template'}</span></div>`;
+ if(r.citations.length)h+=`<details open><summary>Citations (${r.citations.length})</summary><div class="inner">`+r.citations.map(c=>`<div class="cit"><b>${esc(c.doc_id)} §${esc(c.section_number)}</b> — ${esc(c.title)} · ${esc(c.section)}<small>“${esc(c.snippet)}”  <i>(${esc(c.source_file)})</i></small></div>`).join('')+`</div></details>`;
+ for(const d of r.drafts)h+=`<details><summary>Draft email to ${esc(d.to.name)} (NOT sent)</summary><div class="inner"><b>${esc(d.subject)}</b><div class="draft">${esc(d.body)}</div></div></details>`;
+ for(const a of r.pending_actions)h+=`<div class="action" id="a-${a.action_id}"><b>Action needs your confirmation</b><div>${esc(a.description)}</div><pre>${esc(JSON.stringify(a.arguments,null,1))}</pre><button class="primary" onclick="act('${a.action_id}','confirm')">Confirm (mock)</button><button class="ghost" onclick="act('${a.action_id}','cancel')">Cancel</button></div>`;
+ h+=trace(r.trace);return h}
+async function act(id,kind){const box=$('#a-'+id);try{const r=await j('/'+kind,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action_id:id})});
+ box.innerHTML=kind==='confirm'?`<b>Done (mock):</b> ${r.ok?`ticket <code>${esc(r.result.ticket.ticket_id)}</code> created. No real HR system was contacted.`:esc(r.error)}`:'<b>Cancelled.</b> Nothing was created.'}catch(e){box.innerHTML='<b>Error:</b> '+esc(e.message)}}
+async function ask(text){add('user',esc(text));const w=add('bot','<div class="body typing">Working… (the first request after a free-tier cold start can take a minute)</div>');
+ try{const r=await j('/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:text,employee_id:$('#emp').value,state})});state=r.state;w.innerHTML=render(r)}catch(e){w.innerHTML='<div class="body">Sorry, the request failed: '+esc(e.message)+'</div>'}$('#log').scrollTop=1e9}
+$('#f').onsubmit=e=>{e.preventDefault();const t=$('#q').value.trim();if(!t)return;$('#q').value='';ask(t)};
+$('#q').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();$('#f').requestSubmit()}});
+init();
+</script>
+</body>
+</html>

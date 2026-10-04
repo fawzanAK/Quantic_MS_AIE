@@ -1,0 +1,43 @@
+POL-015 | Performance Management and Corrective Action
+Owner: People Operations | Effective: January 1, 2026 | Applies to: All employees and their managers
+================================================================
+
+SECTION 1. PURPOSE
+
+This policy describes how Northwind sets goals, gives feedback, evaluates performance, and handles performance and conduct problems. The aim is to help every employee succeed, to be fair and consistent, and to make decisions based on evidence.
+
+SECTION 2. GOALS AND CONTINUOUS FEEDBACK
+
+Each employee sets goals with their manager at the start of each half-year cycle. Goals should be specific, measurable, and linked to team priorities. Managers hold at least a monthly one-on-one meeting with each person on their team and give feedback regularly, not only at review time. Employees are encouraged to ask for feedback from colleagues and to keep a record of their achievements.
+
+SECTION 3. REVIEW CYCLE
+
+Northwind holds formal performance reviews twice a year, in May and in November. Each review includes a self-assessment, a manager assessment, and input from peers chosen by the employee and manager. Managers meet in calibration sessions to make ratings consistent across teams. Employees receive one of the following ratings:
+
+  5 - Outstanding
+  4 - Exceeds expectations
+  3 - Meets expectations
+  2 - Partially meets expectations
+  1 - Does not meet expectations
+
+Promotion decisions and the annual compensation review in March (see POL-014) draw on the ratings, but ratings do not determine them automatically. Employees in their introductory period receive an introductory-period review at day 90 instead of a rating in the first cycle after they join (see POL-012).
+
+SECTION 4. SUPPORTING AN EMPLOYEE WHO IS STRUGGLING
+
+When a manager sees that an employee's performance is below expectations, the manager should first have a clear conversation, explain the gap, and offer support such as training, coaching, or clearer priorities. The manager should write down the main points of the conversation. If the problem continues, the manager and the HR Business Partner agree on the next step.
+
+SECTION 5. PERFORMANCE IMPROVEMENT PLAN
+
+A Performance Improvement Plan (PIP) is a formal plan that sets out the expectations that must be met, the support that will be given, and the time allowed. A PIP normally lasts **60 days**, with check-in meetings at least every two weeks. The plan is reviewed by the HR Business Partner before it is given to the employee. At the end of the PIP, the outcome is one of the following: the employee has met the expectations and the plan is closed; the plan is extended once, by up to 30 days; or employment ends.
+
+SECTION 6. CORRECTIVE ACTION FOR CONDUCT
+
+Violations of company policy, as described in POL-008, can lead to corrective action. Corrective action normally follows progressive steps: a verbal coaching conversation, a written warning, a final written warning, and then termination. Northwind may skip steps in the case of serious misconduct, such as harassment, violence, theft, or fraud. Before a final warning or a termination, the manager must consult the HR Business Partner and Employee Relations.
+
+SECTION 7. EMPLOYEE RIGHTS
+
+Employees have the right to be told in writing what is expected of them and what the concern is, to explain their side, and to be accompanied by a colleague in formal meetings where local law requires it (for example, in the United Kingdom). Employees can raise a concern about a decision with the next-level manager or with Employee Relations. Northwind will not retaliate against anyone for raising such a concern in good faith.
+
+SECTION 8. RECORDS
+
+Performance records are confidential and are kept in the HR system. They can be seen only by the employee, the management chain, and the People team, and only to the extent they need to see them.

@@ -1,0 +1,308 @@
+{
+  "_meta": {
+    "synthetic": true,
+    "note": "All people, IDs and numbers are fictional and generated for a course project. No real employee data.",
+    "reference_date": "2026-10-01"
+  },
+  "benefits": [
+    {
+      "region": "US",
+      "medical": {
+        "plan": "PPO",
+        "coverage_tier": "employee+family"
+      },
+      "dental": "enrolled",
+      "vision": "enrolled",
+      "k401": {
+        "employee_pct": 6,
+        "employer_match_pct": 4
+      },
+      "wellness_stipend": true,
+      "coverage_effective": "2019-04-01",
+      "notes": "",
+      "status": "enrolled",
+      "employee_id": "E1001",
+      "plan_year": 2026,
+      "open_enrollment": "2026-11-01 to 2026-11-15",
+      "synthetic": true
+    },
+    {
+      "region": "US",
+      "medical": {
+        "plan": "HDHP+HSA",
+        "coverage_tier": "employee_only"
+      },
+      "dental": "enrolled",
+      "vision": "waived",
+      "k401": {
+        "employee_pct": 4,
+        "employer_match_pct": 4
+      },
+      "wellness_stipend": true,
+      "coverage_effective": "2024-09-01",
+      "notes": "",
+      "status": "enrolled",
+      "employee_id": "E1002",
+      "plan_year": 2026,
+      "open_enrollment": "2026-11-01 to 2026-11-15",
+      "synthetic": true
+    },
+    {
+      "region": "PK",
+      "medical": {
+        "plan": "Company group health insurance",
+        "coverage_tier": "employee+spouse+children"
+      },
+      "dental": "local plan",
+      "vision": "local plan",
+      "provident_fund": {
+        "employer_pct": 8
+      },
+      "coverage_effective": "2022-01-17",
+      "notes": "Local (Pakistan) benefits apply; US plans not available.",
+      "status": "enrolled",
+      "employee_id": "E1003",
+      "plan_year": 2026,
+      "open_enrollment": "2026-11-01 to 2026-11-15",
+      "synthetic": true
+    },
+    {
+      "region": "GB",
+      "medical": {
+        "plan": "Private medical insurance",
+        "coverage_tier": "employee_only"
+      },
+      "dental": "not offered",
+      "vision": "not offered",
+      "pension": {
+        "employer_pct": 5
+      },
+      "coverage_effective": "2023-05-02",
+      "notes": "UK benefits apply; US plans not available.",
+      "status": "enrolled",
+      "employee_id": "E1004",
+      "plan_year": 2026,
+      "open_enrollment": "2026-11-01 to 2026-11-15",
+      "synthetic": true
+    },
+    {
+      "region": "US",
+      "medical": {
+        "plan": null,
+        "coverage_tier": null
+      },
+      "dental": "enrolled",
+      "vision": "enrolled",
+      "k401": {
+        "employee_pct": 3,
+        "employer_match_pct": 0
+      },
+      "wellness_stipend": false,
+      "coverage_effective": "2025-03-01",
+      "notes": "Part-time (25 h/week): eligible for dental, vision and 401(k) without match; not eligible for medical or wellness stipend.",
+      "status": "enrolled",
+      "employee_id": "E1005",
+      "plan_year": 2026,
+      "open_enrollment": "2026-11-01 to 2026-11-15",
+      "synthetic": true
+    },
+    {
+      "region": "US",
+      "medical": {
+        "plan": "HDHP+HSA",
+        "coverage_tier": "employee_only"
+      },
+      "dental": "enrolled",
+      "vision": "waived",
+      "k401": {
+        "employee_pct": 3,
+        "employer_match_pct": 3
+      },
+      "wellness_stipend": true,
+      "coverage_effective": "2026-08-01",
+      "notes": "Coverage began the first of the month after the start date.",
+      "status": "enrolled",
+      "employee_id": "E1006",
+      "plan_year": 2026,
+      "open_enrollment": "2026-11-01 to 2026-11-15",
+      "synthetic": true
+    },
+    {
+      "region": "US",
+      "medical": {
+        "plan": "PPO",
+        "coverage_tier": "employee+spouse"
+      },
+      "dental": "enrolled",
+      "vision": "enrolled",
+      "k401": {
+        "employee_pct": 8,
+        "employer_match_pct": 4
+      },
+      "wellness_stipend": true,
+      "coverage_effective": "2021-10-01",
+      "notes": "",
+      "status": "enrolled",
+      "employee_id": "E1007",
+      "plan_year": 2026,
+      "open_enrollment": "2026-11-01 to 2026-11-15",
+      "synthetic": true
+    },
+    {
+      "region": "US",
+      "medical": {
+        "plan": "HDHP+HSA",
+        "coverage_tier": "employee+children"
+      },
+      "dental": "enrolled",
+      "vision": "enrolled",
+      "k401": {
+        "employee_pct": 5,
+        "employer_match_pct": 4
+      },
+      "wellness_stipend": true,
+      "coverage_effective": "2020-07-01",
+      "notes": "",
+      "status": "enrolled",
+      "employee_id": "E1008",
+      "plan_year": 2026,
+      "open_enrollment": "2026-11-01 to 2026-11-15",
+      "synthetic": true
+    },
+    {
+      "region": "PK",
+      "status": "not_eligible",
+      "notes": "Contractor: not eligible for Northwind benefits.",
+      "employee_id": "E1009",
+      "plan_year": 2026,
+      "open_enrollment": "2026-11-01 to 2026-11-15",
+      "synthetic": true
+    },
+    {
+      "region": "US",
+      "medical": {
+        "plan": "PPO",
+        "coverage_tier": "employee+family"
+      },
+      "dental": "enrolled",
+      "vision": "enrolled",
+      "k401": {
+        "employee_pct": 10,
+        "employer_match_pct": 4
+      },
+      "wellness_stipend": true,
+      "coverage_effective": "2017-03-01",
+      "notes": "",
+      "status": "enrolled",
+      "employee_id": "E1010",
+      "plan_year": 2026,
+      "open_enrollment": "2026-11-01 to 2026-11-15",
+      "synthetic": true
+    },
+    {
+      "region": "US",
+      "medical": {
+        "plan": "PPO",
+        "coverage_tier": "employee+spouse"
+      },
+      "dental": "enrolled",
+      "vision": "waived",
+      "k401": {
+        "employee_pct": 12,
+        "employer_match_pct": 4
+      },
+      "wellness_stipend": true,
+      "coverage_effective": "2016-10-01",
+      "notes": "",
+      "status": "enrolled",
+      "employee_id": "E1011",
+      "plan_year": 2026,
+      "open_enrollment": "2026-11-01 to 2026-11-15",
+      "synthetic": true
+    },
+    {
+      "region": "US",
+      "medical": {
+        "plan": "HDHP+HSA",
+        "coverage_tier": "employee_only"
+      },
+      "dental": "enrolled",
+      "vision": "enrolled",
+      "k401": {
+        "employee_pct": 6,
+        "employer_match_pct": 4
+      },
+      "wellness_stipend": true,
+      "coverage_effective": "2019-12-01",
+      "notes": "",
+      "status": "enrolled",
+      "employee_id": "E1012",
+      "plan_year": 2026,
+      "open_enrollment": "2026-11-01 to 2026-11-15",
+      "synthetic": true
+    },
+    {
+      "region": "US",
+      "medical": {
+        "plan": "PPO",
+        "coverage_tier": "employee_only"
+      },
+      "dental": "waived",
+      "vision": "waived",
+      "k401": {
+        "employee_pct": 4,
+        "employer_match_pct": 4
+      },
+      "wellness_stipend": true,
+      "coverage_effective": "2018-05-01",
+      "notes": "Dental and vision waived.",
+      "status": "enrolled",
+      "employee_id": "E1013",
+      "plan_year": 2026,
+      "open_enrollment": "2026-11-01 to 2026-11-15",
+      "synthetic": true
+    },
+    {
+      "region": "US",
+      "medical": {
+        "plan": "HDHP+HSA",
+        "coverage_tier": "employee_only"
+      },
+      "dental": "enrolled",
+      "vision": "enrolled",
+      "k401": {
+        "employee_pct": 5,
+        "employer_match_pct": 4
+      },
+      "wellness_stipend": true,
+      "coverage_effective": "2020-02-01",
+      "notes": "",
+      "status": "enrolled",
+      "employee_id": "E1014",
+      "plan_year": 2026,
+      "open_enrollment": "2026-11-01 to 2026-11-15",
+      "synthetic": true
+    },
+    {
+      "region": "US",
+      "medical": {
+        "plan": "PPO",
+        "coverage_tier": "employee+family"
+      },
+      "dental": "enrolled",
+      "vision": "enrolled",
+      "k401": {
+        "employee_pct": 10,
+        "employer_match_pct": 4
+      },
+      "wellness_stipend": true,
+      "coverage_effective": "2015-02-01",
+      "notes": "",
+      "status": "enrolled",
+      "employee_id": "E1015",
+      "plan_year": 2026,
+      "open_enrollment": "2026-11-01 to 2026-11-15",
+      "synthetic": true
+    }
+  ]
+}

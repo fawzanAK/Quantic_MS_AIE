@@ -1,0 +1,189 @@
+{
+  "_meta": {
+    "synthetic": true,
+    "note": "All people, IDs and numbers are fictional and generated for a course project. No real employee data.",
+    "reference_date": "2026-10-01"
+  },
+  "balances": [
+    {
+      "employee_id": "E1001",
+      "pto_eligible": true,
+      "carryover_days": 3,
+      "accrued_ytd_days": 18.75,
+      "used_ytd_days": 14,
+      "pending_days": 0,
+      "sick_days_remaining": 10,
+      "floating_holidays_remaining": 1,
+      "as_of": "2026-10-01",
+      "synthetic": true
+    },
+    {
+      "employee_id": "E1002",
+      "pto_eligible": true,
+      "carryover_days": 2,
+      "accrued_ytd_days": 11.67,
+      "used_ytd_days": 6,
+      "pending_days": 0,
+      "sick_days_remaining": 8,
+      "floating_holidays_remaining": 2,
+      "as_of": "2026-10-01",
+      "synthetic": true
+    },
+    {
+      "employee_id": "E1003",
+      "pto_eligible": true,
+      "carryover_days": 0,
+      "accrued_ytd_days": 15,
+      "used_ytd_days": 9,
+      "pending_days": 0,
+      "sick_days_remaining": 9,
+      "floating_holidays_remaining": 1,
+      "as_of": "2026-10-01",
+      "synthetic": true
+    },
+    {
+      "employee_id": "E1004",
+      "pto_eligible": true,
+      "carryover_days": 1,
+      "accrued_ytd_days": 15,
+      "used_ytd_days": 14,
+      "pending_days": 0,
+      "sick_days_remaining": 10,
+      "floating_holidays_remaining": 0,
+      "as_of": "2026-10-01",
+      "synthetic": true
+    },
+    {
+      "employee_id": "E1005",
+      "pto_eligible": true,
+      "carryover_days": 0,
+      "accrued_ytd_days": 7.03,
+      "used_ytd_days": 3,
+      "pending_days": 0,
+      "sick_days_remaining": 6,
+      "floating_holidays_remaining": 1,
+      "as_of": "2026-10-01",
+      "synthetic": true
+    },
+    {
+      "employee_id": "E1006",
+      "pto_eligible": true,
+      "carryover_days": 0,
+      "accrued_ytd_days": 3.75,
+      "used_ytd_days": 0,
+      "pending_days": 0,
+      "sick_days_remaining": 10,
+      "floating_holidays_remaining": 1,
+      "as_of": "2026-10-01",
+      "synthetic": true
+    },
+    {
+      "employee_id": "E1007",
+      "pto_eligible": true,
+      "carryover_days": 5,
+      "accrued_ytd_days": 15.42,
+      "used_ytd_days": 12,
+      "pending_days": 0,
+      "sick_days_remaining": 10,
+      "floating_holidays_remaining": 2,
+      "as_of": "2026-10-01",
+      "synthetic": true
+    },
+    {
+      "employee_id": "E1008",
+      "pto_eligible": true,
+      "carryover_days": 4,
+      "accrued_ytd_days": 18.75,
+      "used_ytd_days": 8,
+      "pending_days": 0,
+      "sick_days_remaining": 9,
+      "floating_holidays_remaining": 1,
+      "as_of": "2026-10-01",
+      "synthetic": true
+    },
+    {
+      "employee_id": "E1009",
+      "pto_eligible": false,
+      "carryover_days": 0,
+      "accrued_ytd_days": 0,
+      "used_ytd_days": 0,
+      "pending_days": 0,
+      "sick_days_remaining": 0,
+      "floating_holidays_remaining": 0,
+      "as_of": "2026-10-01",
+      "synthetic": true
+    },
+    {
+      "employee_id": "E1010",
+      "pto_eligible": true,
+      "carryover_days": 5,
+      "accrued_ytd_days": 18.75,
+      "used_ytd_days": 10,
+      "pending_days": 0,
+      "sick_days_remaining": 10,
+      "floating_holidays_remaining": 2,
+      "as_of": "2026-10-01",
+      "synthetic": true
+    },
+    {
+      "employee_id": "E1011",
+      "pto_eligible": true,
+      "carryover_days": 2,
+      "accrued_ytd_days": 18.75,
+      "used_ytd_days": 15,
+      "pending_days": 0,
+      "sick_days_remaining": 10,
+      "floating_holidays_remaining": 2,
+      "as_of": "2026-10-01",
+      "synthetic": true
+    },
+    {
+      "employee_id": "E1012",
+      "pto_eligible": true,
+      "carryover_days": 5,
+      "accrued_ytd_days": 18.75,
+      "used_ytd_days": 12,
+      "pending_days": 1,
+      "sick_days_remaining": 10,
+      "floating_holidays_remaining": 2,
+      "as_of": "2026-10-01",
+      "synthetic": true
+    },
+    {
+      "employee_id": "E1013",
+      "pto_eligible": true,
+      "carryover_days": 1,
+      "accrued_ytd_days": 18.75,
+      "used_ytd_days": 17,
+      "pending_days": 0,
+      "sick_days_remaining": 7,
+      "floating_holidays_remaining": 0,
+      "as_of": "2026-10-01",
+      "synthetic": true
+    },
+    {
+      "employee_id": "E1014",
+      "pto_eligible": true,
+      "carryover_days": 0,
+      "accrued_ytd_days": 18.75,
+      "used_ytd_days": 6,
+      "pending_days": 0,
+      "sick_days_remaining": 10,
+      "floating_holidays_remaining": 2,
+      "as_of": "2026-10-01",
+      "synthetic": true
+    },
+    {
+      "employee_id": "E1015",
+      "pto_eligible": true,
+      "carryover_days": 5,
+      "accrued_ytd_days": 18.75,
+      "used_ytd_days": 9,
+      "pending_days": 0,
+      "sick_days_remaining": 10,
+      "floating_holidays_remaining": 2,
+      "as_of": "2026-10-01",
+      "synthetic": true
+    }
+  ]
+}

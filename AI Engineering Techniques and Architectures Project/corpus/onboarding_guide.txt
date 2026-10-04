@@ -1,0 +1,71 @@
+POL-009 | New Hire Onboarding Guide and Checklist
+Owner: People Operations | Effective: January 1, 2026 | Applies to: All new employees and their managers
+================================================================
+
+SECTION 1. PURPOSE AND OVERVIEW
+
+This guide explains what happens when a new employee joins Northwind Analytics and what the employee and manager should complete. A good start helps new hires feel welcome, productive, and secure. The first 90 calendar days of employment are the introductory period, which is described in POL-012.
+
+SECTION 2. BEFORE THE FIRST DAY
+
+The People team, IT, and the hiring manager complete these steps at least 5 business days before the start date:
+
+  - Send the welcome email with the start date, start time, and a first-day agenda.
+  - IT orders and configures the new hire's laptop and accessories and ships it so that it arrives at least 3 days before the start date for remote employees (see POL-010).
+  - The manager assigns an onboarding buddy.
+  - The manager creates a 30-60-90 day plan with the new hire's first projects.
+  - The People team prepares employment paperwork, including local requirements for the United States, Pakistan, or the United Kingdom.
+
+SECTION 3. DAY ONE CHECKLIST
+
+  [ ] Meet your manager and your onboarding buddy.
+  [ ] Complete Section 1 of the U.S. Form I-9 (U.S. employees); Section 2, the document review, must be completed within 3 business days of the start date.
+  [ ] Set up your accounts, including single sign-on and multi-factor authentication (see POL-004).
+  [ ] Install required security software on your device and check that the VPN works.
+  [ ] Submit payroll information, including direct deposit details, in the HR system.
+  [ ] Review the team calendar and your first-week schedule.
+
+SECTION 4. FIRST WEEK CHECKLIST
+
+  [ ] Attend the company orientation session.
+  [ ] Review the employee handbook, including POL-001 (PTO), POL-003 (remote work), POL-005 (expenses), and POL-008 (code of conduct).
+  [ ] Meet the key people on your team and the departments you will work with.
+  [ ] Set up your workspace. Remote and hybrid employees should read the home office stipend rules in POL-005 and note that the stipend is available only after the introductory period.
+  [ ] Agree on your goals for the first 30 days with your manager.
+
+SECTION 5. FIRST 30 DAYS
+
+New hires must finish the following within the first 30 days unless a shorter deadline is stated:
+
+  - **Compliance training:** security awareness training, code of conduct training, and harassment prevention training must be completed within 14 days of the start date.
+  - **Benefits enrollment:** employees must enroll in benefits within 30 days of becoming eligible (see POL-006). Coverage for eligible full-time employees starts on the first day of the month after the start date.
+  - **401(k):** eligible employees can start contributions after 30 days of employment.
+  - **Manager check-in:** a one-on-one meeting each week with the manager during the first month.
+
+SECTION 6. THE 30-60-90 DAY PLAN AND THE INTRODUCTORY PERIOD
+
+The manager and new hire review progress at 30, 60, and 90 days. At 90 days, the manager completes an introductory-period review. The introductory period lasts 90 calendar days from the start date. During this time:
+
+  - the employee accrues PTO from day one but cannot take it without People team approval (POL-001);
+  - the employee is not eligible for temporary work from another state or country (POL-003);
+  - the home office stipend cannot be claimed until the period is over (POL-005);
+  - paid company holidays are available from the first day (POL-002); and
+  - parental leave and similar leaves begin to be available after the period ends (POL-007).
+
+SECTION 7. MANAGER ONBOARDING CHECKLIST
+
+Managers should:
+
+  1. Confirm the new hire's equipment request has been submitted at least 5 business days before the start date.
+  2. Introduce the new hire to the team on the first day.
+  3. Make sure the new hire has access to all required systems within the first 3 days.
+  4. Hold a weekly one-on-one for the first 30 days.
+  5. Complete the introductory-period review by day 90.
+
+SECTION 8. OFFICES OUTSIDE THE UNITED STATES
+
+In Karachi and London, the People team provides local onboarding documents, such as the employment contract acknowledgement, tax forms, and the local health-insurance or pension enrollment forms. The first-day checklist is otherwise the same.
+
+SECTION 9. QUESTIONS
+
+New hires should ask their onboarding buddy first and then their HR Business Partner. For IT issues, contact the IT Service Desk.

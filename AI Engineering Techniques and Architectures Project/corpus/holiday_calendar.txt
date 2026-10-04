@@ -1,0 +1,67 @@
+POL-002 | Holiday Calendar and Observances
+Owner: People Operations | Effective: January 1, 2026 | Applies to: All employees
+================================================================
+
+SECTION 1. PURPOSE
+
+This policy lists the paid company holidays that Northwind Analytics observes at each office and explains how holidays are handled when they fall on a weekend, during PTO, or on a working day for employees who must work. Holidays are separate from paid time off (PTO) described in POL-001. Employees do not use PTO for a company holiday.
+
+SECTION 2. PAID COMPANY HOLIDAYS - UNITED STATES (AUSTIN AND U.S. REMOTE)
+
+Northwind observes 11 paid holidays each year for employees in the United States:
+
+  1. New Year's Day (January 1)
+  2. Martin Luther King Jr. Day (third Monday in January)
+  3. Memorial Day (last Monday in May)
+  4. Juneteenth (June 19)
+  5. Independence Day (July 4)
+  6. Labor Day (first Monday in September)
+  7. Thanksgiving Day (fourth Thursday in November)
+  8. Day after Thanksgiving (Friday)
+  9. Christmas Eve (December 24)
+  10. Christmas Day (December 25)
+  11. Year-End Day (December 31)
+
+SECTION 3. PAID COMPANY HOLIDAYS - PAKISTAN (KARACHI OFFICE)
+
+The Karachi office follows the local public-holiday calendar. Employees in Karachi receive the following paid holidays, with dates published each December by the Karachi People team:
+
+  - Kashmir Solidarity Day (February 5)
+  - Pakistan Day (March 23)
+  - Eid ul-Fitr (three days)
+  - Labour Day (May 1)
+  - Eid ul-Adha (three days)
+  - Ashura (two days)
+  - Independence Day (August 14)
+  - Iqbal Day (November 9)
+  - Quaid-e-Azam Day / Christmas Day (December 25)
+
+The dates of Islamic holidays depend on the sighting of the moon and may move by one day. When the government announces a change, the Karachi People team updates the calendar within one business day, and the new date applies.
+
+SECTION 4. PAID COMPANY HOLIDAYS - UNITED KINGDOM (LONDON OFFICE)
+
+Employees in London receive the eight public bank holidays for England and Wales (New Year's Day, Good Friday, Easter Monday, Early May bank holiday, Spring bank holiday, Summer bank holiday, Christmas Day, and Boxing Day). In addition, Northwind closes the London office between December 27 and December 31, and these days are paid company closure days that do not reduce PTO.
+
+SECTION 5. FLOATING HOLIDAYS
+
+All full-time employees receive 2 floating holidays per calendar year to use for religious, cultural, or personal observances that are not on the company calendar. Part-time employees receive floating holidays in proportion to their scheduled hours. Employees who join after June 30 receive 1 floating holiday for that year. Floating holidays must be requested at least 5 business days in advance and must be approved by the manager. Unused floating holidays do not carry over and are not paid out.
+
+SECTION 6. HOLIDAYS THAT FALL ON A WEEKEND
+
+When a U.S. holiday falls on a Saturday, it is observed on the preceding Friday. When it falls on a Sunday, it is observed on the following Monday. The People team publishes the observed dates each year. In Karachi and London, the local rules for substitute days apply.
+
+SECTION 7. HOLIDAYS DURING PTO OR LEAVE
+
+A paid company holiday that falls during an approved PTO absence is not deducted from the PTO balance. For example, if an employee in Austin takes PTO from Monday to Friday and Wednesday is a company holiday, only four days are deducted. Holidays that fall during paid sick leave or parental leave are also not deducted from those balances.
+
+SECTION 8. WORKING ON A HOLIDAY
+
+Some roles, such as Customer Support, may be required to work on a company holiday. Employees who are not exempt under wage-and-hour law are paid at 1.5 times their regular rate for hours worked on a holiday and receive a substitute paid day off within 60 days. Exempt employees who work on a holiday receive a substitute day off within 60 days. A manager must ask for holiday work at least 14 days ahead except in an emergency.
+
+SECTION 9. NEW EMPLOYEES
+
+Employees are eligible for paid company holidays from their first day of work, including during the 90-day introductory period.
+
+SECTION 10. QUESTIONS
+
+Questions about the holiday calendar should be sent to the People team at people@northwind.example.

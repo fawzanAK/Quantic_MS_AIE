@@ -1,0 +1,10 @@
+# Runtime
+mcp>=1.9,<2          # MCP Python SDK (1.x: FastMCP + stdio/streamable-http clients)
+fastapi>=0.115
+uvicorn[standard]>=0.30
+scikit-learn>=1.4    # TF-IDF + truncated SVD (LSA) embeddings
+numpy>=1.26
+faiss-cpu>=1.8       # vector index
+beautifulsoup4>=4.12 # HTML policy parsing
+httpx>=0.27          # OpenAI-compatible LLM client (Groq/OpenRouter)
+python-dotenv>=1.0   # loads a local .env (optional; real env vars take precedence)

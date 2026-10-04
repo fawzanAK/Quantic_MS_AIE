@@ -1,0 +1,45 @@
+{
+  "_meta": {
+    "synthetic": true,
+    "note": "All people, IDs and numbers are fictional and generated for a course project. No real employee data.",
+    "reference_date": "2026-10-01"
+  },
+  "tickets": [
+    {
+      "ticket_id": "HR-2001",
+      "employee_id": "E1003",
+      "category": "benefits",
+      "summary": "Add newborn to group health plan",
+      "status": "resolved",
+      "created": "2026-06-12",
+      "synthetic": true
+    },
+    {
+      "ticket_id": "HR-2002",
+      "employee_id": "E1005",
+      "category": "payroll",
+      "summary": "Question about part-time PTO accrual",
+      "status": "open",
+      "created": "2026-09-22",
+      "synthetic": true
+    },
+    {
+      "ticket_id": "HR-2003",
+      "employee_id": "E1007",
+      "category": "equipment",
+      "summary": "Replace damaged laptop charger",
+      "status": "resolved",
+      "created": "2026-08-30",
+      "synthetic": true
+    },
+    {
+      "ticket_id": "HR-2004",
+      "employee_id": "E1001",
+      "category": "pto",
+      "summary": "Carryover days question",
+      "status": "resolved",
+      "created": "2026-02-17",
+      "synthetic": true
+    }
+  ]
+}
