@@ -62,13 +62,32 @@ jobs:
         run: |
           if [ -z "$RENDER_DEPLOY_HOOK_URL" ]; then echo "RENDER_DEPLOY_HOOK_URL secret not set - skipping deploy"; exit 0; fi
           curl -fsS -X POST "$RENDER_DEPLOY_HOOK_URL"
-      - name: Wait for /health (free tier may take a minute)
+          echo "DEPLOY_TRIGGERED_AT=$(date +%s)" >> "$GITHUB_ENV"
+      - name: Wait for the NEW deployment to be healthy (free-tier Docker build can take several minutes)
         env:
           APP_URL: ${{ secrets.APP_URL }}
         run: |
           if [ -z "$APP_URL" ]; then echo "APP_URL secret not set - skipping smoke test"; exit 0; fi
-          for i in $(seq 1 30); do
-            if curl -fsS "$APP_URL/health" | grep -q '"status":"ok"'; then echo "healthy"; exit 0; fi
+          # The old instance keeps answering /health while Render builds, so "status: ok" alone proves nothing.
+          # Only accept a response from an instance that started after the hook fired: uptime_s < seconds since trigger.
+          # Without a triggered deploy (no hook secret) fall back to a plain health check.
+          started="${DEPLOY_TRIGGERED_AT:-0}"
+          for i in $(seq 1 90); do
+            body=$(curl -sS --max-time 60 "$APP_URL/health" || true)
+            if echo "$body" | STARTED="$started" python3 -c '
+          import json, os, sys, time
+          try:
+              h = json.load(sys.stdin)
+          except ValueError:
+              print("no JSON yet"); sys.exit(1)
+          up = h.get("app", {}).get("uptime_s", 1e9)
+          mcp = h.get("mcp", {})
+          started = int(os.environ["STARTED"])
+          fresh = started == 0 or up < time.time() - started
+          ok = h.get("status") == "ok" and bool(mcp.get("connected"))
+          print("health_ok=%s uptime_s=%s tools=%s new_instance=%s" % (ok, up, mcp.get("tool_count"), fresh))
+          sys.exit(0 if ok and fresh else 1)
+          '; then echo "new deployment is healthy"; exit 0; fi
             sleep 10
           done
-          echo "service did not become healthy"; exit 1
+          echo "new deployment did not become healthy within 15 minutes"; exit 1
