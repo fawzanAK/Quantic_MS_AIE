@@ -74,7 +74,7 @@ python -m evaluation.run_eval --quick    # CI gate: main metrics only, non-zero 
    (the public https URL).
 4. Push to `main`: CI runs tests + the evaluation gate; only if they pass does the `deploy` job call the hook and poll `/health`.
 
-**Free-tier cold start:** Render sleeps idle free services; the first request after idle can take up to about a minute while
+**Free-tier cold start:** Render sleeps idle free services; the first request after idle took ~33 s (measured) while
 the container wakes, then the app spawns the MCP subprocess (~13 s measured on the free tier's 0.1 CPU). The first chat after a
 fresh deploy is also slow (~84 s measured, one-time). Open `/health` and send one chat message before a demo.
 

@@ -37,11 +37,14 @@ UI. `index/` is built during the Docker build (`RUN python -m rag.ingest`).
 | Warm `/chat` with GPT-4o synthesis | ~2-4 s |
 | Warm `/chat` with LLM intent fallback only | ~1-1.5 s |
 | Chat UI `/` | ~0.9 s |
+| Wake from sleep: first `/health` after idle (2026-10-05) | ~33 s (instance `uptime_s` 18.7 on reply) |
+| First `/chat` after waking from sleep | ~3.8 s (no extra warm-up, unlike a fresh deploy) |
 
 ## Cold start (free tier)
 - Idle free services sleep after ~15 minutes; the next request wakes the container, then the app spawns the MCP subprocess
-  (~13 s measured above). Wake-from-sleep time was not separately measured; expect up to about a minute.
-- Before a demo, open `/health`, then send one chat message to absorb the one-time first-request warm-up.
+  (~13 s measured above). Measured wake-from-sleep: the first `/health` after idle took ~33 s end to end.
+- Before a demo, open `/health` about a minute ahead. Only right after a fresh deploy is the first chat also slow (~84 s), so
+  send one chat message then too.
 
 ## Secrets
 `RENDER_DEPLOY_HOOK_URL`, `APP_URL` (GitHub Actions secrets); `LLM_API_KEY` (Render env var). Nothing else is required.
